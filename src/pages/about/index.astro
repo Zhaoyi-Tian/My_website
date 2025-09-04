@@ -1,10 +1,20 @@
 ---
 import { Comment } from 'astro-pure/advanced'
 import { Timeline } from 'astro-pure/user'
+import { Image } from 'astro:assets'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 import '@/assets/styles/about.css'
+
+// 导入所有头像图片
+import profile1 from '/public/profile/1.png'
+import profile2 from '/public/profile/2.png'
+import profile3 from '/public/profile/3.png'
+import profile5 from '/public/profile/5.jpg'
+
+const allProfiles = [profile1, profile2, profile3, profile5]
+const initialProfile = profile1
 
 const headings = [
   { depth: 2, slug: 'myself', text: '关于我' },
@@ -20,15 +30,14 @@ const headings = [
   
   <div class="content">
     <div class="about-image-container">
-      <img 
+      <Image 
+        id="profile-image"
+        src={initialProfile}
         alt="田照亿" 
-        decoding="async" 
-        height="300" 
-        loading="eager" 
-        src="/profile/1.png" 
-        width="300" 
-        id="profile-image" 
-        style="opacity: 1;"
+        loading="eager"
+        quality="high"
+        width={300}
+        height={300}
       />
       <p class="image-caption">
         Guess what? 
@@ -47,7 +56,36 @@ const headings = [
     </div>
   </div>
 
-  <script src="/scripts/profile-image.js" is:inline></script>
+  <script is:inline define:vars={{ profiles: allProfiles, initialProfile: initialProfile }}>
+    const profileImage = document.getElementById('profile-image')
+    const imageSources = profiles.map((p) => p.src)
+    let currentIndex = profiles.findIndex((p) => p.src === initialProfile.src)
+
+    window.addEventListener('load', () => {
+      profiles.forEach((profile, index) => {
+        if (index !== currentIndex) {
+          const img = new Image()
+          img.src = profile.src
+        }
+      })
+    })
+
+    if (profileImage) {
+      profileImage.addEventListener('click', () => {
+        profileImage.style.opacity = '0'
+        setTimeout(() => {
+          if (imageSources.length > 1) {
+            const oldIndex = currentIndex
+            do {
+              currentIndex = Math.floor(Math.random() * imageSources.length)
+            } while (currentIndex === oldIndex)
+          }
+          profileImage.src = imageSources[currentIndex]
+          profileImage.style.opacity = '1'
+        }, 300)
+      })
+    }
+  </script>
 
   <h2 id='education'>教育经历</h2>
   <Timeline
