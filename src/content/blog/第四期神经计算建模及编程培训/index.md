@@ -27,7 +27,7 @@ $$
 \end{aligned}
 $$
 
-![image-20250820094200625](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250820094200625.png)
+![image-20250820094200625](images/image-20250820094200625.png)
 
 ## 简化神经元模型及其动力学分析
 
@@ -59,7 +59,7 @@ if\; V>\theta, V\leftarrow V_{reset}\quad last \; t_{ref}
 $$
 真实神经元在接受输入电流时，当膜电位接近发放阈值（但未达到），其电位上升速率会**随电位升高而加速**（非线性增长），而非 LIF 模型假设的线性积累。
 
-![image-20250820160335624](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250820160335624.png)
+![image-20250820160335624](images/image-20250820160335624.png)
 
 ### The AdEx neuron model
 
@@ -70,7 +70,7 @@ $$
 if\; V>\theta, V\leftarrow V_{reset}\quad last \; t_{ref}
 $$
 
-![image-20250820154421718](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250820154421718.png)
+![image-20250820154421718](images/image-20250820154421718.png)
 
 ### other multivariate neuron model
 
@@ -80,7 +80,7 @@ $$
 \frac{du}{dt}=a(bV-u)\\
 if \; V>\theta,\quad V\leftarrow c,u\leftarrow u+d\quad last\;t_{ref}
 $$
-![image-20250820161305549](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250820161305549.png)
+![image-20250820161305549](images/image-20250820161305549.png)
 
 **the FitzHugh-Nagumo(FHN) model** 具有连续性
 $$
@@ -94,7 +94,7 @@ $$
 \frac{dI_j}{dt}=-k_jI_j,\quad j=1,2,...,n\\
 if \;V>\theta,I_j\leftarrow R_jI_j+A_j,V\leftarrow V_{reset},\theta\leftarrow max(\theta_{reset},\theta)
 $$
-![image-20250820163442917](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250820163442917.png)
+![image-20250820163442917](images/image-20250820163442917.png)
 
 ## 突触模型
 
@@ -106,7 +106,7 @@ $$
 $$
 $\tau$为时间常数，$g_{syn} $为突触电导，$\bar g_{syn} $为最大电导，$t_0$为动作电位触发时刻
 
-![image-20250822205722918](C:\Users\50376\Pictures\Screenshots\屏幕截图 2025-08-22 205757.png)
+![image-20250822205722918](images/屏幕截图%202025-08-22%20205757.png)
 
 **Dual Exponential Model**
 $$
@@ -118,7 +118,7 @@ g_{syn}(t)=\bar g_{syn}g\\
 \frac{dg}{dt}=-\frac{g}{\tau_{decay}}+h\\
 \frac{dh}{dt}=-\frac{h}{\tau_{rise}}+\delta(t_0-t)
 $$
-![屏幕截图 2025-08-22 205757](C:\Users\50376\Pictures\Screenshots\屏幕截图 2025-08-22 205930.png)
+![屏幕截图 2025-08-22 205757](images/屏幕截图%202025-08-22%20205930.png)
 
 ### 动力学模型
 
@@ -129,7 +129,7 @@ I=\bar g s(V-E)
 $$
 E为**反转电位**，决定突触是兴奋还是抑制
 
-![image-20250822211437456](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250822211437456.png)
+![image-20250822211437456](images/image-20250822211437456.png)
 
 **NMDA synapse model**
 
@@ -168,7 +168,7 @@ $$
 \frac{d g(t)}{d t}=-\frac{g(t)}{\tau_{s}}+A U_{S E} x^{-} \delta\left(t-t_{s p}\right)\\
 EPSC =A U_{S E} x^{-}
 $$
-![image-20250823180310450](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250823180310450.png)
+![image-20250823180310450](images/image-20250823180310450.png)
 
 **神经递质释放概率模型（Neurotransmitter Release Probability Model）**
 
@@ -179,7 +179,7 @@ $$
 \frac{d g(t)}{d t}=-\frac{g(t)}{\tau_{s}}+A u^{+} x^{-} \delta\left(t-t_{s p}\right)\\
 EPSC=A u^{+} x^{-}, u^{+}=\lim *{t-t*{s p} \to 0^{+}} u(t)
 $$
-![image-20250823180012317](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250823180012317.png)
+![image-20250823180012317](images/image-20250823180012317.png)
 
 based on firing rate
 $$
@@ -188,7 +188,7 @@ $$
 g(t)=\tau_sA u^+xR(t)\\
 u^+=u(t)+U_{SE}[1-u(t)]
 $$
-![image-20250823193318951](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250823193318951.png)
+![image-20250823193318951](images/image-20250823193318951.png)
 
 ### 长时程可塑性
 
@@ -214,9 +214,9 @@ $$
 \frac{dw_{ij}}{dt}=-F_-(w_{ij})y_i(t)\delta(t-t_i^f)+F_+(w_{ij})x_j(t)\delta(t-t_j^f)
 $$
 
-![image-20250823195627168](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250823195627168.png)
+![image-20250823195627168](images/image-20250823195627168.png)
 
-![image-20250823195653404](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250823195653404.png)
+![image-20250823195653404](images/image-20250823195653404.png)
 
 ## 抉择网络模型
 
@@ -236,11 +236,11 @@ I_{\text {rec,NMDA }}(t)=\frac{g_{\mathrm{NMDA}}\left(V(t)-V_E\right)}{\left(1+\
 I_{\mathrm{rec}, \mathrm{GABA}}(t)=g_{\mathrm{GABA}}\left(V(t)-V_l\right) \sum_{j=1}^{C_1} s_j^{\mathrm{GABA}}(t)  
 \end{gathered}  
 $$
-![image-20250824162005938](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824162005938.png)
+![image-20250824162005938](images/image-20250824162005938.png)
 
-![image-20250824162238113](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824162238113.png)
+![image-20250824162238113](images/image-20250824162238113.png)
 
-![image-20250824162300289](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824162300289.png)
+![image-20250824162300289](images/image-20250824162300289.png)
 
 ### Rate DM Model 速率决策神经网络
 
@@ -256,15 +256,15 @@ dI_{noise2} = - I_{noise2} \frac{dt}{\tau_0} + \sigma dW\\
 \mu_2 =\mu_0(1-c'/100)
 $$
 
-![image-20250824163919029](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824163919029.png)
+![image-20250824163919029](images/image-20250824163919029.png)
 
-![image-20250824163941574](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824163941574.png)
+![image-20250824163941574](images/image-20250824163941574.png)
 
 ## 兴奋抑制平衡网络
 
 ### An E-I balance neural network
 
-![image-20250824210233805](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824210233805.png)
+![image-20250824210233805](images/image-20250824210233805.png)
 $$
 \tau \frac{du_i^E}{dt} = -u_i^E + \sum_{j=1}^{K_E} J_{EE} r_j^E + \sum_{j=1}^{K_I} J_{EI} r_j^I + I_i^E\\
 
@@ -291,7 +291,7 @@ $$
 
 **前馈抑制可塑性神经元模型**
 
-![image-20250824210936265](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824210936265.png)
+![image-20250824210936265](images/image-20250824210936265.png)
 $$
 % 神经元动力学方程
 \tau \frac{dV_i}{dt} = \left( V^\text{rest} - V_i \right) + \left( g_i^E (V^E - V_i) + g_i^I (V^I - V_i) + I_b \right) \times \frac{1}{g^\text{leak}}\\
@@ -312,7 +312,7 @@ $$
 $$
 \Delta w=\eta(pre\times post-\rho_0\times pre)
 $$
-![image-20250824211721014](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250824211721014.png)
+![image-20250824211721014](images/image-20250824211721014.png)
 
 ## 连续吸引子网络模型
 
@@ -324,14 +324,14 @@ w_{ij} = \frac{1}{N} \sum_{\mu = 1}^{P} \xi_i^\mu \xi_j^\mu \quad (i \neq j) \\
 w_{ii} = 0\\
 $$
 
-![image-20250825193437836](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250825193437836.png)
+![image-20250825193437836](images/image-20250825193437836.png)
 $$
 \text{Energy function}:\;E = -\frac{1}{2} \sum_{i = 1}^{N} \sum_{j = 1}^{N} w_{ij} S_i S_j + \sum_{i = 1}^{N} \theta_i S_i
 $$
 
 ### Modern Hopfield Network with Hidden Layer
 
-![image-20250825201407747](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250825201407747.png)
+![image-20250825201407747](images/image-20250825201407747.png)
 $$
 \begin{cases} 
 \tau_f \frac{d v_i}{d t} = \sum_{\mu=1}^{N_h} \xi_{i \mu} f_\mu - v_i + I_i & (f_\mu = f(\{h_\mu\})) \\
@@ -357,7 +357,7 @@ r(x, t) = \frac{U^{2}(x, t)}{1 + k \rho \int U^{2}(x, t) d x}\\
 J\left(x, x'\right) = \frac{J_{0}}{\sqrt{2 \pi} a} \exp \left[ -\frac{\left(x - x'\right)^{2}}{2 a^{2}} \right]\\
 $$
 
-![image-20250825204915856](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250825204915856.png)
+![image-20250825204915856](images/image-20250825204915856.png)
 
 **bump** 状态是指 CANN 达到稳定状态时，**神经元群体的突触输入**$(\bar{U}(x|z))$与**发放率**$(\bar{r}(x|z))$在空间上呈现 **“局部高活动、全局低活动”** 的高斯型分布，此时：
 $$
@@ -386,7 +386,7 @@ $$
 
 带 SFA 的 CANN 遇到**外部移动输入**，会表现出 3 种不同的 “跟踪模式”
 
-![image-20250826114047265](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250826114047265.png)
+![image-20250826114047265](images/image-20250826114047265.png)
 
 | 跟踪模式                             | 特点                                            | 适用场景                                        |
 | ------------------------------------ | ----------------------------------------------- | ----------------------------------------------- |
@@ -394,13 +394,13 @@ $$
 | **振荡跟踪（Oscillatory tracking）** | 活性团跟随外部输入，但会围绕输入位置 “上下振荡” | 外部输入速度中等，SFA 效应与外部驱动平衡        |
 | **平滑跟踪（Smooth tracking）**      | 活性团完全跟随外部输入移动，无延迟、无振荡      | 外部输入速度$v_{ext}$较慢，SFA 效应较弱         |
 
-![image-20250826114727762](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250826114727762.png)
+![image-20250826114727762](images/image-20250826114727762.png)
 
 ## 循环神经网络
 
 ### From SNN to rate-based model
 
-![image-20250826190739289](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250826190739289.png)
+![image-20250826190739289](images/image-20250826190739289.png)
 
 **SNN**
 $$
@@ -448,17 +448,18 @@ $$
 \boldsymbol{r}_{t} = (1 - \alpha) \boldsymbol{r}_{t - d t} + \alpha f\left( W^{\mathrm{rec}} \boldsymbol{r}_{t - d t} + W^{\mathrm{in}} \boldsymbol{u}_{t} + \boldsymbol{b}^{\mathrm{rec}} + \sqrt{\frac{2}{\alpha}} \sigma_{\mathrm{rec}} N(0,1) \right)
 $$
 
-![image-20250827115226180](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250827115226180.png)
+![image-20250827115226180](images/image-20250827115226180.png)
 
 ### Echo state machine
 
-![image-20250827115420190](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250827115420190.png)
+![image-20250827115420190](images/image-20250827115420190.png)
 $$
 
     \mathbf{h}(t) = (1 - \alpha) \mathbf{h}(t-1) + \alpha \cdot \tanh\left( \mathbf{W}^{\mathrm{rec}} \mathbf{h}(t-1) + \mathbf{W}^{\mathrm{in}} \mathbf{u}(t) + \mathbf{b} \right)\\
 
 % 网络输出方程 (线性读出)
-    \mathbf{y}(t) = \mathbf{W}^{\mathrm{out}} \mathbf{h}(t)
+    \mathbf{y}(t) = \mathbf{W}^{\mathrm{out}} \mathbf{h}(t)
+
 $$
 训练$W^{out}$（岭回归）：
 $$
@@ -481,7 +482,7 @@ $$
 
 此外$ \left| \lambda_{\mathrm{max}} \left( \mathbf{W}^{\mathrm{rec}} \right) \right| > 1 \quad \Rightarrow \quad \text{ESP does not hold}$
 
-![image-20250827120555035](C:\Users\50376\AppData\Roaming\Typora\typora-user-images\image-20250827120555035.png)
+![image-20250827120555035](images/image-20250827120555035.png)
 
 ## 脉冲神经网络训练
 
