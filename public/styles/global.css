@@ -1,3 +1,13 @@
+/* Text Selection */
+::selection {
+  background-color: #9ca3af;
+  color: white;
+}
+::-moz-selection {
+  background-color: #9ca3af;
+  color: white;
+}
+
 /* Animation */
 @keyframes fade-in-up {
   0% {
